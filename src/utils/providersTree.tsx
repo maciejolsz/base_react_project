@@ -10,7 +10,7 @@ const ProvidersTree = buildProvidersTree([
 
 NOTE: throws warning about render / createRoot conflict
 */
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const buildProvidersTree = (componentsWithProps: [React.ComponentType<any>, object][]) => {
   const initialComponent = ({ children }: { children?: ReactNode }) => <>{children}</>;
   return componentsWithProps.reduce((AccumulatedComponents, [Provider, props = {}]) => {
