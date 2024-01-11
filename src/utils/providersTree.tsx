@@ -13,7 +13,6 @@ NOTE: throws warning about render / createRoot conflict
 
 export const buildProvidersTree = (componentsWithProps: [React.ComponentType<any>, object][]) => {
   const initialComponent = ({ children }: { children?: ReactNode }) => <>{children}</>;
-  console.log("bcc");
   return componentsWithProps.reduce((AccumulatedComponents, [Provider, props = {}]) => {
     return ({ children }: { children?: ReactNode }) => {
       return (
